@@ -1,10 +1,10 @@
 /***************************************************************************//**
-  ÎÄ¼ş: main.c
-  ×÷Õß: Zhengyu https://gzwelink.taobao.com
-  °æ±¾: V1.0.0
-  Ê±¼ä: 202101201
-	Æ½Ì¨:MINI-GD32F303RCT6¿ª·¢°å
-	Î¢ĞÅºÅ:gzwelink
+  æ–‡ä»¶: main.c
+  ä½œè€…: Zhengyu https://gzwelink.taobao.com
+  ç‰ˆæœ¬: V1.0.0
+  æ—¶é—´: 202101201
+	å¹³å°:MINI-GD32F303RCT6å¼€å‘æ¿
+	å¾®ä¿¡å·:gzwelink
 
 *******************************************************************************/
 
@@ -14,24 +14,26 @@
 
 int main(void)
 {
-  rcu_ahb_clock_config(RCU_AHB_CKSYS_DIV1);//ÉèÖÃÖ÷Æµ120M(#define __SYSTEM_CLOCK_120M_PLL_HXTAL           (uint32_t)(120000000),8MÍâ²¿¾§Õñ  (#define HXTAL_VALUE    ((uint32_t)8000000))
+  rcu_ahb_clock_config(RCU_AHB_CKSYS_DIV1);//è®¾ç½®ä¸»é¢‘120M(#define __SYSTEM_CLOCK_120M_PLL_HXTAL           (uint32_t)(120000000),8Må¤–éƒ¨æ™¶æŒ¯  (#define HXTAL_VALUE    ((uint32_t)8000000))
 	systick_config();//1ms systick
-	rcu_periph_clock_enable(RCU_AF); //AFÊ±ÖÓÊ¹ÄÜ 
-	delay_1ms(1000);//µÈ´ı1000ms
-	gpio_pin_remap_config(GPIO_SWJ_NONJTRST_REMAP, ENABLE);//ÏÂÔØ¿ÚNJTRSTÒı½Åµ±×öÆÕÍ¨I/O¿Ú
-	rcu_periph_clock_enable(RCU_GPIOB);//PBÊ±ÖÓÊ¹ÄÜ
-	gpio_init(GPIOB, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_4);//PB4ÅäÖÃ³ÉÊä³ö
+	rcu_periph_clock_enable(RCU_AF); //AFæ—¶é’Ÿä½¿èƒ½ 
+	delay_1ms(1000);//ç­‰å¾…1000ms
+	gpio_pin_remap_config(GPIO_SWJ_NONJTRST_REMAP, ENABLE);//ä¸‹è½½å£NJTRSTå¼•è„šå½“åšæ™®é€šI/Oå£
+	rcu_periph_clock_enable(RCU_GPIOB);//PBæ—¶é’Ÿä½¿èƒ½
+	gpio_init(GPIOB, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_4);//PB4é…ç½®æˆè¾“å‡º
 	//zhiwen add 23 - 02 - 25
-	gpio_init(GPIOA, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_4);//PA4ÅäÖÃ³ÉÊä³ö
-
+	gpio_init(GPIOA, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_4);//PA4é…ç½®æˆè¾“å‡º
+	gpio_init(GPIOA, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_5);//PA4é…ç½®æˆè¾“å‡º
     while(1)
     {
-        delay_1ms(1000);//µÈ´ı1000ms
-        gpio_bit_set(GPIOA, GPIO_PIN_4);//Êä³ö¸ß
-		gpio_bit_set(GPIOB, GPIO_PIN_4);//Êä³ö¸ß
+        delay_1ms(1000);//ç­‰å¾…1000ms
+        gpio_bit_set(GPIOA, GPIO_PIN_4);//è¾“å‡ºé«˜
+	gpio_bit_set(GPIOA, GPIO_PIN_5);//è¾“å‡ºé«˜        
+	gpio_bit_set(GPIOB, GPIO_PIN_4);//è¾“å‡ºé«˜
         delay_1ms(1000);
-        gpio_bit_reset(GPIOA, GPIO_PIN_4);//Êä³öµÍ
-		gpio_bit_reset(GPIOB, GPIO_PIN_4);//Êä³öµÍ
+        gpio_bit_reset(GPIOA, GPIO_PIN_4);//è¾“å‡ºä½
+	gpio_bit_reset(GPIOA, GPIO_PIN_5);//è¾“å‡ºä½    
+	gpio_bit_reset(GPIOB, GPIO_PIN_4);//è¾“å‡ºä½
     }
     return 0;
 }
