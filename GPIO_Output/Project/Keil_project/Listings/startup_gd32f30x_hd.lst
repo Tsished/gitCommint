@@ -590,12 +590,13 @@ ARM Macro Assembler    Page 10
 
 
               00000000 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
-erwork --depend=.\objects\startup_gd32f30x_hd.d -o.\objects\startup_gd32f30x_hd
-.o -I.\RTE\_Target_1 -IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F30x_DFP\2.1.0\Device
-\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 525
-" --predefine="GD32F30X_HD SETA 1" --list=.\listings\startup_gd32f30x_hd.lst ..
-\..\Firmware\CMSIS\GD\GD32F30x\Source\ARM\startup_gd32f30x_hd.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=.\objects\startup_gd32f30x_hd.d -o.\objects\startup_gd32f30x
+_hd.o -I.\RTE\_Target_1 -ID:\keil5\GigaDevice\GD32F30x_DFP\2.1.0\Device\Include
+ -ID:\keil5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 530" --predef
+ine="GD32F30X_HD SETA 1" --predefine="_RTE_ SETA 1" --list=.\listings\startup_g
+d32f30x_hd.lst ..\..\Firmware\CMSIS\GD\GD32F30x\Source\ARM\startup_gd32f30x_hd.
+s
 
 
 
@@ -1756,4 +1757,4 @@ d32f30x_hd.s
       None
 Comment: __use_two_region_memory unused
 3 symbols
-426 symbols in table
+427 symbols in table
