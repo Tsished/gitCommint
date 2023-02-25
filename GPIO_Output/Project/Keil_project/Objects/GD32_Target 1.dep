@@ -865,7 +865,7 @@ I (..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h)(0x61CC21
 I (..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h)(0x61CC215B)
 I (..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h)(0x61CC215C)
 I (..\systick.h)(0x61CC2162)
-F (..\main.c)(0x63F9E0F0)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\Firmware\CMSIS -I ..\..\Firmware\CMSIS\GD\GD32F30x\Include -I ..\..\Firmware\GD32F30x_standard_peripheral\Include -I ..\-I.\RTE\_Target_1-ID:\keil5\GigaDevice\GD32F30x_DFP\2.1.0\Device\Include-ID:\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="530" -DGD32F30X_HD -D_RTE_ -DGD32F30X_HD -D__FPU_PRESENT-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\main.c)(0x63F9F7C3)(-c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ..\..\Firmware\CMSIS -I ..\..\Firmware\CMSIS\GD\GD32F30x\Include -I ..\..\Firmware\GD32F30x_standard_peripheral\Include -I ..\-I.\RTE\_Target_1-ID:\keil5\GigaDevice\GD32F30x_DFP\2.1.0\Device\Include-ID:\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="530" -DGD32F30X_HD -D_RTE_ -DGD32F30X_HD -D__FPU_PRESENT-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\..\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h)(0x61D510F3)
 I (..\..\Firmware\CMSIS\core_cm4.h)(0x61CC215C)
 I (D:\keil5\ARM\ARMCC\include\stdint.h)(0x6359F3EC)

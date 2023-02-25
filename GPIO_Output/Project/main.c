@@ -23,14 +23,16 @@ int main(void)
 	gpio_init(GPIOB, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_4);//PB4配置成输出
 	//zhiwen add 23 - 02 - 25
 	gpio_init(GPIOA, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_4);//PA4配置成输出
-	
+	gpio_init(GPIOA, GPIO_MODE_OUT_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_5);//PA4配置成输出
     while(1)
     {
         delay_1ms(1000);//等待1000ms
         gpio_bit_set(GPIOA, GPIO_PIN_4);//输出高
+		gpio_bit_set(GPIOA, GPIO_PIN_5);//输出高
 		gpio_bit_set(GPIOB, GPIO_PIN_4);//输出高
         delay_1ms(1000);
         gpio_bit_reset(GPIOA, GPIO_PIN_4);//输出低
+		gpio_bit_reset(GPIOA, GPIO_PIN_5);//输出低
 		gpio_bit_reset(GPIOB, GPIO_PIN_4);//输出低
     }
     return 0;
