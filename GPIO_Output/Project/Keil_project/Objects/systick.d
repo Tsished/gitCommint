@@ -1,7 +1,7 @@
 .\objects\systick.o: ..\systick.c
 .\objects\systick.o: ..\..\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h
 .\objects\systick.o: ..\..\Firmware\CMSIS\core_cm4.h
-.\objects\systick.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\systick.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\systick.o: ..\..\Firmware\CMSIS\core_cmInstr.h
 .\objects\systick.o: ..\..\Firmware\CMSIS\core_cmFunc.h
 .\objects\systick.o: ..\..\Firmware\CMSIS\core_cm4_simd.h
